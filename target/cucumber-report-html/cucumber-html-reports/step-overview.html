@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>RGPS_Project</td>
+                          <td>1</td>
+                        <td>26 Jul 2023, 19:19</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">Regression_Suite.click_Blog_Link()</td>
+                <td>6</td>
+                <td class="duration" data-value="12758531000">12s 758ms</td>
+                <td class="duration" data-value="2126421833">2s 126ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_Library_link()</td>
+                <td>1</td>
+                <td class="duration" data-value="2128972300">2s 128ms</td>
+                <td class="duration" data-value="2128972300">2s 128ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_Sign_In_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="2084420700">2s 084ms</td>
+                <td class="duration" data-value="2084420700">2s 084ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_Sign_In_link()</td>
+                <td>1</td>
+                <td class="duration" data-value="2109357900">2s 109ms</td>
+                <td class="duration" data-value="2109357900">2s 109ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_Sign_up_link()</td>
+                <td>6</td>
+                <td class="duration" data-value="12931621600">12s 931ms</td>
+                <td class="duration" data-value="2155270266">2s 155ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_Student_Support_link()</td>
+                <td>1</td>
+                <td class="duration" data-value="2135625400">2s 135ms</td>
+                <td class="duration" data-value="2135625400">2s 135ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_Teachers_link()</td>
+                <td>1</td>
+                <td class="duration" data-value="2118423200">2s 118ms</td>
+                <td class="duration" data-value="2118423200">2s 118ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_examination_link()</td>
+                <td>1</td>
+                <td class="duration" data-value="2154219500">2s 154ms</td>
+                <td class="duration" data-value="2154219500">2s 154ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_login_button()</td>
+                <td>11</td>
+                <td class="duration" data-value="23505187600">23s 505ms</td>
+                <td class="duration" data-value="2136835236">2s 136ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_notice_link()</td>
+                <td>4</td>
+                <td class="duration" data-value="8521888100">8s 521ms</td>
+                <td class="duration" data-value="2130472025">2s 130ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_on_the_Festival_Celebrations_details()</td>
+                <td>1</td>
+                <td class="duration" data-value="2363411100">2s 363ms</td>
+                <td class="duration" data-value="2363411100">2s 363ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_on_the_Science_Fair_details()</td>
+                <td>1</td>
+                <td class="duration" data-value="2152377300">2s 152ms</td>
+                <td class="duration" data-value="2152377300">2s 152ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_on_the_annual_details()</td>
+                <td>1</td>
+                <td class="duration" data-value="2216076800">2s 216ms</td>
+                <td class="duration" data-value="2216076800">2s 216ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_on_the_details()</td>
+                <td>1</td>
+                <td class="duration" data-value="1203712300">1s 203ms</td>
+                <td class="duration" data-value="1203712300">1s 203ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_on_the_field_trip_details()</td>
+                <td>1</td>
+                <td class="duration" data-value="2259996100">2s 259ms</td>
+                <td class="duration" data-value="2259996100">2s 259ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.click_view()</td>
+                <td>1</td>
+                <td class="duration" data-value="2086211900">2s 086ms</td>
+                <td class="duration" data-value="2086211900">2s 086ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.enter_Email_Address_and_password()</td>
+                <td>1</td>
+                <td class="duration" data-value="2254749000">2s 254ms</td>
+                <td class="duration" data-value="2254749000">2s 254ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.mouse_hover_to_Acadamic_Link()</td>
+                <td>5</td>
+                <td class="duration" data-value="11150399400">11s 150ms</td>
+                <td class="duration" data-value="2230079880">2s 230ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.open_Application(String)</td>
+                <td>26</td>
+                <td class="duration" data-value="98075154800">1m 38s 075ms</td>
+                <td class="duration" data-value="3772121338">3s 772ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_All_fields_and_button_available()</td>
+                <td>1</td>
+                <td class="duration" data-value="8220994200">8s 220ms</td>
+                <td class="duration" data-value="8220994200">8s 220ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_Already_have_an_account_yet_Sign_In_is_available()</td>
+                <td>1</td>
+                <td class="duration" data-value="2040663600">2s 040ms</td>
+                <td class="duration" data-value="2040663600">2s 040ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_Blog_Notice_details_will_display_AnnualDay()</td>
+                <td>1</td>
+                <td class="duration" data-value="2039217000">2s 039ms</td>
+                <td class="duration" data-value="2039217000">2s 039ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_Blog_Notice_details_will_display_Festival()</td>
+                <td>1</td>
+                <td class="duration" data-value="2039480200">2s 039ms</td>
+                <td class="duration" data-value="2039480200">2s 039ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_Blog_Notice_details_will_display_Grandpartents()</td>
+                <td>1</td>
+                <td class="duration" data-value="2076333400">2s 076ms</td>
+                <td class="duration" data-value="2076333400">2s 076ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_Blog_Notice_details_will_display_ScienceFair()</td>
+                <td>1</td>
+                <td class="duration" data-value="2040326200">2s 040ms</td>
+                <td class="duration" data-value="2040326200">2s 040ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_Blog_Notice_will_display_FieldTrip()</td>
+                <td>1</td>
+                <td class="duration" data-value="2043529400">2s 043ms</td>
+                <td class="duration" data-value="2043529400">2s 043ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_Blog_page_display()</td>
+                <td>1</td>
+                <td class="duration" data-value="2089743100">2s 089ms</td>
+                <td class="duration" data-value="2089743100">2s 089ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_Choose_File_button_is_available_in_signup_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="2036071100">2s 036ms</td>
+                <td class="duration" data-value="2036071100">2s 036ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_Forget_Password_Link_display()</td>
+                <td>1</td>
+                <td class="duration" data-value="2042298900">2s 042ms</td>
+                <td class="duration" data-value="2042298900">2s 042ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_Four_option_link_display()</td>
+                <td>1</td>
+                <td class="duration" data-value="2086987500">2s 086ms</td>
+                <td class="duration" data-value="2086987500">2s 086ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_Notice_page_appear_when_click_Notice_link()</td>
+                <td>1</td>
+                <td class="duration" data-value="2050624700">2s 050ms</td>
+                <td class="duration" data-value="2050624700">2s 050ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_Sign_in_page_appear_when_click_Sign_In_link()</td>
+                <td>1</td>
+                <td class="duration" data-value="2041377300">2s 041ms</td>
+                <td class="duration" data-value="2041377300">2s 041ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_Title_Data_and_View_display()</td>
+                <td>1</td>
+                <td class="duration" data-value="2044555300">2s 044ms</td>
+                <td class="duration" data-value="2044555300">2s 044ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_after_clicking_Examination_link_Sign_in_page_will_appear()</td>
+                <td>1</td>
+                <td class="duration" data-value="2040744900">2s 040ms</td>
+                <td class="duration" data-value="2040744900">2s 040ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_after_clicking_Library_link_Labrary_page_will_appear()</td>
+                <td>1</td>
+                <td class="duration" data-value="2039365400">2s 039ms</td>
+                <td class="duration" data-value="2039365400">2s 039ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_after_clicking_Student_Support_link_Student_Support_page_will_appear()</td>
+                <td>1</td>
+                <td class="duration" data-value="2055597700">2s 055ms</td>
+                <td class="duration" data-value="2055597700">2s 055ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_after_clicking_Teachers_link_Teachers_page_will_appear()</td>
+                <td>1</td>
+                <td class="duration" data-value="2047265200">2s 047ms</td>
+                <td class="duration" data-value="2047265200">2s 047ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_all_fields_display_in_sign_in_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="4089763800">4s 089ms</td>
+                <td class="duration" data-value="4089763800">4s 089ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_notice_board_details_display()</td>
+                <td>1</td>
+                <td class="duration" data-value="2051724700">2s 051ms</td>
+                <td class="duration" data-value="2051724700">2s 051ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_notice_board_displays()</td>
+                <td>1</td>
+                <td class="duration" data-value="2038213300">2s 038ms</td>
+                <td class="duration" data-value="2038213300">2s 038ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_sign_in_page_display_after_clicking_login_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="3041586200">3s 041ms</td>
+                <td class="duration" data-value="3041586200">3s 041ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_sign_up_link_display_in_Signin_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="3031980100">3s 031ms</td>
+                <td class="duration" data-value="3031980100">3s 031ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_sign_up_page_display_when_click_sign_up_link()</td>
+                <td>1</td>
+                <td class="duration" data-value="2037509600">2s 037ms</td>
+                <td class="duration" data-value="2037509600">2s 037ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_signup_page_is_display()</td>
+                <td>1</td>
+                <td class="duration" data-value="2045976600">2s 045ms</td>
+                <td class="duration" data-value="2045976600">2s 045ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Regression_Suite.verify_user_able_to_Sign_in()</td>
+                <td>1</td>
+                <td class="duration" data-value="2061497600">2s 061ms</td>
+                <td class="duration" data-value="2061497600">2s 061ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>45</td>
+              <td>97</td>
+              <td class="duration">4m 17s 683ms</td>
+              <td class="duration">2s 656ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
